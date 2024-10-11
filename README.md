@@ -22,41 +22,48 @@ To run this project locally, follow the steps below:
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/your-username/your-repo.git
-    ```
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   ```
 
 2. Install the dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. Set up environment variables:
 
-    Create a `.env.local` file in the root of your project and add the following:
+   Create a `.env.local` file in the root of your project and add the following:
 
-    ```bash
-    MONGODB_URI=your-mongodb-uri
-    ```
+   ```bash
+   MONGODB_URI=your-mongodb-uri
+   ```
 
 4. Run the development server:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
-    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Project Structure
 
 ```bash
-├── components
-├── pages
-│   ├── api
-│   │   └── todos
-│   └── edit-todo
-├── public
-├── styles
-├── utils
-└── README.md
+├── node_modules          # Dependencies
+├── src                   # Source files
+│   ├── app               # Application logic
+│   │   └── add-todo      # Add Todo feature
+│   │       ├── edit-todo # Page for editing todo items
+│   │       ├── api       # API routes
+│   │       │   └── [id]  # Dynamic route for specific todos
+│   │       └── page.tsx  # Main page for adding todos
+│   │       └── layout.tsx # Layout for the add-todo page
+├── components            # Reusable UI components
+├── libs                  # Library functions and helpers
+├── models                # Database models
+├── .env                  # Environment variables
+└── README.md             # Project documentation
+
+```
